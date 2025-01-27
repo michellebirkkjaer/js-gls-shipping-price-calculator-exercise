@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLS Fragtpris Beregner</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="container">
+        <h1>Beregn Fragtpris</h1>
+        <form id="fragtForm">
+            <label>Destination:</label>
+            <div>
+                <input type="radio" name="destination" value="PakkeShop" id="pakkeShop" checked>
+                <label for="pakkeShop">Afhentning PakkeShop</label>
+            </div>
+            <div>
+                <input type="radio" name="destination" value="Erhverv/Privatadresse" id="erhvervPrivat">
+                <label for="erhvervPrivat">Levering til Erhverv/Privatadresse</label>
+            </div>
+
+            <label for="vaegt">Vælg vægt:</label>
+            <select id="vaegt" name="vaegt">
+                <option value="1">0-1 kg</option>
+                <option value="5">1-5 kg</option>
+                <option value="10">5-10 kg</option>
+                <option value="15">10-15 kg</option>
+                <option value="20">15-20 kg</option>
+            </select>
+
+            <button type="button" onclick="beregnFragt()">Beregn Fragtpris</button>
+
+            <div id="result" class="result" style="display: none;"></div>
+        </form>
+    </section>
+
+</body>
+</html>
